@@ -1,0 +1,113 @@
+/* Custom CSS for SMPN 36 Surabaya Literasiku */
+
+/* Logo styling */
+.brand-logo {
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    transition: transform 0.2s ease-in-out;
+}
+
+.brand-logo:hover {
+    transform: scale(1.05);
+}
+
+/* Dashboard welcome section logo */
+.dashboard-logo {
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* School colors - SMPN 36 Surabaya theme */
+.school-primary {
+    color: #1e40af; /* Blue */
+}
+
+.school-secondary {
+    color: #f59e0b; /* Yellow */
+}
+
+.school-accent {
+    color: #dc2626; /* Red */
+}
+
+/* Custom gradient for SMPN 36 */
+.school-gradient {
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #f59e0b 100%);
+}
+
+/* Responsive logo sizing */
+@media (max-width: 768px) {
+    .dashboard-logo {
+        height: 3rem;
+        width: 3rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .dashboard-logo {
+        height: 4rem;
+        width: 4rem;
+    }
+}
+
+/* Mobile Navigation Styles */
+#mobile-menu {
+    transition: all 0.3s ease-in-out;
+    transform-origin: top;
+}
+
+#mobile-menu:not(.hidden) {
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile menu button hover effects */
+#mobile-menu-button:hover {
+    transform: scale(1.05);
+}
+
+#mobile-menu-button:active {
+    transform: scale(0.95);
+}
+
+/* Ensure mobile menu items have proper touch targets */
+@media (max-width: 768px) {
+    #mobile-menu a {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+/* Smooth transitions for mobile menu */
+#mobile-menu-button svg {
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Mobile menu backdrop */
+.mobile-menu-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 40;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.mobile-menu-backdrop.active {
+    opacity: 1;
+    visibility: visible;
+}
